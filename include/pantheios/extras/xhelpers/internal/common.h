@@ -5,7 +5,7 @@
  *              Pantheios.Extras.xHelpers library.
  *
  * Created:     30th January 2011
- * Updated:     10th September 2015
+ * Updated:     15th September 2015
  *
  * Home:        http://www.pantheios.org/
  *
@@ -94,13 +94,14 @@
 #ifndef PANTHEIOS_DOCUMENTATION_SKIP_SECTION
 # define PANTHEIOS_EXTRAS_XHELPERS_VER_0_1_1_ALPHA_1        0x01000101
 # define PANTHEIOS_EXTRAS_XHELPERS_VER_0_1_1_ALPHA_2        0x01000102
+# define PANTHEIOS_EXTRAS_XHELPERS_VER_0_1_1                0x010001ff
 #endif /* !PANTHEIOS_DOCUMENTATION_SKIP_SECTION */
 
 #define PANTHEIOS_EXTRAS_XHELPERS_VER_MAJOR                 0
 #define PANTHEIOS_EXTRAS_XHELPERS_VER_MINOR                 1
 #define PANTHEIOS_EXTRAS_XHELPERS_VER_REVISION              1
 
-#define PANTHEIOS_EXTRAS_XHELPERS_VER                       PANTHEIOS_EXTRAS_XHELPERS_VER_0_1_1_ALPHA_2
+#define PANTHEIOS_EXTRAS_XHELPERS_VER                       PANTHEIOS_EXTRAS_XHELPERS_VER_0_1_1
 
 /* /////////////////////////////////////////////////////////////////////////
  * Inclusion
