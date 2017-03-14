@@ -5,11 +5,11 @@
  *              Pantheios.Extras.xHelpers library.
  *
  * Created:     30th January 2011
- * Updated:     15th September 2015
+ * Updated:     14th February 2017
  *
  * Home:        http://www.pantheios.org/
  *
- * Copyright (c) 2011-2015, Matthew Wilson and Synesis Software
+ * Copyright (c) 2011-2017, Matthew Wilson and Synesis Software
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -55,8 +55,8 @@
 #ifndef PANTHEIOS_DOCUMENTATION_SKIP_SECTION
 # define PANTHEIOS_EXTRAS_XHELPERS_VER_PANTHEIOS_EXTRAS_XHELPERS_INTERNAL_H_COMMON_MAJOR    1
 # define PANTHEIOS_EXTRAS_XHELPERS_VER_PANTHEIOS_EXTRAS_XHELPERS_INTERNAL_H_COMMON_MINOR    0
-# define PANTHEIOS_EXTRAS_XHELPERS_VER_PANTHEIOS_EXTRAS_XHELPERS_INTERNAL_H_COMMON_REVISION 6
-# define PANTHEIOS_EXTRAS_XHELPERS_VER_PANTHEIOS_EXTRAS_XHELPERS_INTERNAL_H_COMMON_EDIT     6
+# define PANTHEIOS_EXTRAS_XHELPERS_VER_PANTHEIOS_EXTRAS_XHELPERS_INTERNAL_H_COMMON_REVISION 7
+# define PANTHEIOS_EXTRAS_XHELPERS_VER_PANTHEIOS_EXTRAS_XHELPERS_INTERNAL_H_COMMON_EDIT     7
 #endif /* !PANTHEIOS_DOCUMENTATION_SKIP_SECTION */
 
 /* /////////////////////////////////////////////////////////////////////////
@@ -92,16 +92,17 @@
  */
 
 #ifndef PANTHEIOS_DOCUMENTATION_SKIP_SECTION
-# define PANTHEIOS_EXTRAS_XHELPERS_VER_0_1_1_ALPHA_1        0x01000101
-# define PANTHEIOS_EXTRAS_XHELPERS_VER_0_1_1_ALPHA_2        0x01000102
-# define PANTHEIOS_EXTRAS_XHELPERS_VER_0_1_1                0x010001ff
+# define PANTHEIOS_EXTRAS_XHELPERS_VER_0_1_1_ALPHA_1        0x00010101
+# define PANTHEIOS_EXTRAS_XHELPERS_VER_0_1_1_ALPHA_2        0x00010102
+# define PANTHEIOS_EXTRAS_XHELPERS_VER_0_1_1                0x000101ff
+# define PANTHEIOS_EXTRAS_XHELPERS_VER_0_1_2                0x000102ff
 #endif /* !PANTHEIOS_DOCUMENTATION_SKIP_SECTION */
 
 #define PANTHEIOS_EXTRAS_XHELPERS_VER_MAJOR                 0
 #define PANTHEIOS_EXTRAS_XHELPERS_VER_MINOR                 1
-#define PANTHEIOS_EXTRAS_XHELPERS_VER_REVISION              1
+#define PANTHEIOS_EXTRAS_XHELPERS_VER_REVISION              2
 
-#define PANTHEIOS_EXTRAS_XHELPERS_VER                       PANTHEIOS_EXTRAS_XHELPERS_VER_0_1_1
+#define PANTHEIOS_EXTRAS_XHELPERS_VER                       PANTHEIOS_EXTRAS_XHELPERS_VER_0_1_2
 
 /* /////////////////////////////////////////////////////////////////////////
  * Inclusion
