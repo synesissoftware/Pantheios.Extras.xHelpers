@@ -1,10 +1,15 @@
 
 # NOTE: the library's invoke.hpp carries unused parameters that predate
-# -Werror; suppressed here rather than changing library source. The
-# Pantheios front-/back-end libraries are linked because xhelpers.hpp
-# pulls in the Pantheios API, which references pantheios_init().
+# -Werror (C4100 on MSVC); suppressed here rather than changing library
+# source. The Pantheios front-/back-end libraries are linked because
+# xhelpers.hpp pulls in the Pantheios API, which references
+# pantheios_init().
 list(APPEND X_GCC_CUSTOM_WARNINGS_TO_BE_SUPPRESSED
 	unused-parameter
+)
+
+list(APPEND X_MSVC_CUSTOM_WARNINGS_TO_BE_SUPPRESSED
+	4100 # unreferenced formal parameter
 )
 
 define_example_program(test.scratch.versions main.cpp)

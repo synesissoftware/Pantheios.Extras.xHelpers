@@ -1,14 +1,15 @@
 /* /////////////////////////////////////////////////////////////////////////
- * File:        pantheios/extras/xhelpers/internal/stlsoft.h
+ * File:    pantheios/extras/xhelpers/internal/stlsoft.h
  *
- * Purpose:     "Entry point" include into the STLSoft libraries.
+ * Purpose: "Entry point" include into the STLSoft libraries.
  *
- * Created:     30th January 2011
- * Updated:     10th September 2015
+ * Created: 30th January 2011
+ * Updated: 9th October 2026
  *
- * Home:        http://www.pantheios.org/
+ * Home:    http://www.pantheios.org/
  *
- * Copyright (c) 2011-2015, Matthew Wilson and Synesis Software
+ * Copyright (c) 2019-2026, Matthew Wilson and Synesis Information Systems
+ * Copyright (c) 2011-2019, Matthew Wilson and Synesis Software
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -53,8 +54,8 @@
 #ifndef PANTHEIOS_DOCUMENTATION_SKIP_SECTION
 # define PANTHEIOS_EXTRAS_XHELPERS_VER_PANTHEIOS_EXTRAS_XHELPERS_INTERNAL_H_STLSOFT_MAJOR       1
 # define PANTHEIOS_EXTRAS_XHELPERS_VER_PANTHEIOS_EXTRAS_XHELPERS_INTERNAL_H_STLSOFT_MINOR       0
-# define PANTHEIOS_EXTRAS_XHELPERS_VER_PANTHEIOS_EXTRAS_XHELPERS_INTERNAL_H_STLSOFT_REVISION    2
-# define PANTHEIOS_EXTRAS_XHELPERS_VER_PANTHEIOS_EXTRAS_XHELPERS_INTERNAL_H_STLSOFT_EDIT        2
+# define PANTHEIOS_EXTRAS_XHELPERS_VER_PANTHEIOS_EXTRAS_XHELPERS_INTERNAL_H_STLSOFT_REVISION    3
+# define PANTHEIOS_EXTRAS_XHELPERS_VER_PANTHEIOS_EXTRAS_XHELPERS_INTERNAL_H_STLSOFT_EDIT        3
 #endif /* !PANTHEIOS_DOCUMENTATION_SKIP_SECTION */
 
 /* /////////////////////////////////////////////////////////////////////////
@@ -69,22 +70,13 @@
  * Compatibility checks
  */
 
-/* STLSoft 1.9 check */
+/* STLSoft check
+ */
 
 #if !defined(_STLSOFT_VER) || \
-    _STLSOFT_VER < 0x010978ff
-# error Requires STLSoft 1.9.120, or later. (www.stlsoft.org)
+    _STLSOFT_VER < 0x010b01c7
+# error Requires STLSoft 1.11.1-rc7, or later. (www.stlsoft.org)
 #endif /* STLSoft version */
-
-/* STLSoft 1.10 check */
-
-#if _STLSOFT_VER < 0x010a0000 && \
-    defined(_STLSOFT_1_10_VER) && \
-    _STLSOFT_1_10_VER < 0x010a0113
-
-# error If you're using STLSoft 1.10 alpha you must use at least version 1.10.1 alpha 19
-
-#endif /* STLSoft 1.10.1 alpha 1 - alpha 8 */
 
 #if defined(__cplusplus) && \
     defined(_STLSOFT_NO_NAMESPACE)
