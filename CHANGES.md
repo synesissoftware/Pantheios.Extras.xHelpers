@@ -1,7 +1,7 @@
 # Pantheios.Extras.xHelpers - Changes <!-- omit in toc -->
 
 
-## Unreleased
+## 0.1.3-beta1 - 9th October 2026
 
 * Added **CMake** build (`BUILD_TESTING`, `BUILD_EXAMPLES`), exported INTERFACE target `Pantheios.Extras.xHelpers::Pantheios.Extras.xHelpers`, and installed package `pantheios.extras.xhelpers` whose configuration re-finds **STLSoft** and **Pantheios** when they were located as packages;
 * Added GitHub Actions CI (**ci.yml** / **ci-cell.yml**) with install smoke, using the **install-sis-deps** composite action;
