@@ -4,7 +4,7 @@
  * Purpose:     Implementation file for the test.unit.xhelpers.functions.1 library.
  *
  * Created:     24th February 2011
- * Updated:     10th September 2015
+ * Updated:     9th October 2026
  *
  * Status:      Wizard-generated
  *
@@ -153,16 +153,9 @@ static void test_1_0()
 
 		static int c_api_function_oom_()
 		{
-			size_t const n = 0x7fffffffu;
-
-			char* p = new char[n];
-
-			if(NULL == p)
-			{
-				throw std::bad_alloc();
-			}
-
-			return -1;
+			// throw directly: a large `new` succeeds on 64-bit hosts (and may
+			// be elided), so it cannot be relied on to provoke bad_alloc
+			throw std::bad_alloc();
 		}
 		static int c_api_function_oom()
 		{
@@ -218,16 +211,8 @@ static void test_1_1()
 
 		static int c_api_function_oom_(int r)
 		{
-			size_t const n = 0x7fffffffu;
-
-			char* p = new char[n];
-
-			if(NULL == p)
-			{
-				throw std::bad_alloc();
-			}
-
-			return r;
+			// throw directly: see above
+			throw std::bad_alloc();
 		}
 		static int c_api_function_oom(int r)
 		{
