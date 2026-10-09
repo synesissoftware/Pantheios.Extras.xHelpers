@@ -123,6 +123,10 @@ option(BUILD_TESTING "Build tests" ON)
 # ############################
 # STLSoft
 
+# TRUE only when STLSoft was found as a CMake package, in which case the
+# exported target (and the installed package configuration) must depend on it
+set(XHELPERS_STLSOFT_IS_PACKAGE FALSE)
+
 if(DEFINED STLSOFT)
 
 	message("-- STLSOFT provided as CMake variable with value '${STLSOFT}'")
@@ -140,6 +144,8 @@ else()
 	set(STLSoft_REQUIRED_VERSION_ 1.11.1)
 
 	find_package(STLSoft ${STLSoft_REQUIRED_VERSION_} REQUIRED)
+
+	set(XHELPERS_STLSOFT_IS_PACKAGE TRUE)
 
 	message("-- CMake package STLSoft found (version ${STLSoft_VERSION}; ${STLSoft_REQUIRED_VERSION_} requested)")
 endif()
@@ -169,6 +175,9 @@ endif(b64_FOUND)
 # ############################
 # Pantheios
 
+# TRUE only when Pantheios was found as a CMake package (see above)
+set(XHELPERS_PANTHEIOS_IS_PACKAGE FALSE)
+
 if(DEFINED PANTHEIOS)
 
 	message("-- PANTHEIOS provided as CMake variable with value '${PANTHEIOS}'")
@@ -184,6 +193,8 @@ else()
 	set(Pantheios_REQUIRED_VERSION_ 1.0.1)
 
 	find_package(Pantheios ${Pantheios_REQUIRED_VERSION_} REQUIRED)
+
+	set(XHELPERS_PANTHEIOS_IS_PACKAGE TRUE)
 
 	message("-- CMake package Pantheios found (version ${Pantheios_VERSION}; ${Pantheios_REQUIRED_VERSION_} requested)")
 endif()
@@ -252,6 +263,23 @@ target_include_directories(Pantheios.Extras.xHelpers INTERFACE
 	$<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/include>
 	$<INSTALL_INTERFACE:include>
 )
+
+# The public headers include both STLSoft and Pantheios, so consumers
+# require them. xTests (test-only) is deliberately NOT on this interface.
+if(XHELPERS_STLSOFT_IS_PACKAGE)
+
+	target_link_libraries(Pantheios.Extras.xHelpers INTERFACE
+		STLSoft::STLSoft
+	)
+endif()
+
+if(XHELPERS_PANTHEIOS_IS_PACKAGE)
+
+	target_link_libraries(Pantheios.Extras.xHelpers INTERFACE
+		Pantheios::Pantheios.core
+		Pantheios::Pantheios.util
+	)
+endif()
 
 install(TARGETS Pantheios.Extras.xHelpers
 	EXPORT project-targets
