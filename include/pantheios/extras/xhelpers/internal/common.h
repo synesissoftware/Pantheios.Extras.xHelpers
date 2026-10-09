@@ -5,10 +5,11 @@
  *              Pantheios.Extras.xHelpers library.
  *
  * Created:     30th January 2011
- * Updated:     14th February 2017
+ * Updated:     17th September 2026
  *
  * Home:        http://www.pantheios.org/
  *
+ * Copyright (c) 2019-2026, Matthew Wilson and Synesis Information Systems
  * Copyright (c) 2011-2017, Matthew Wilson and Synesis Software
  * All rights reserved.
  *
@@ -55,8 +56,8 @@
 #ifndef PANTHEIOS_DOCUMENTATION_SKIP_SECTION
 # define PANTHEIOS_EXTRAS_XHELPERS_VER_PANTHEIOS_EXTRAS_XHELPERS_INTERNAL_H_COMMON_MAJOR    1
 # define PANTHEIOS_EXTRAS_XHELPERS_VER_PANTHEIOS_EXTRAS_XHELPERS_INTERNAL_H_COMMON_MINOR    0
-# define PANTHEIOS_EXTRAS_XHELPERS_VER_PANTHEIOS_EXTRAS_XHELPERS_INTERNAL_H_COMMON_REVISION 7
-# define PANTHEIOS_EXTRAS_XHELPERS_VER_PANTHEIOS_EXTRAS_XHELPERS_INTERNAL_H_COMMON_EDIT     7
+# define PANTHEIOS_EXTRAS_XHELPERS_VER_PANTHEIOS_EXTRAS_XHELPERS_INTERNAL_H_COMMON_REVISION 8
+# define PANTHEIOS_EXTRAS_XHELPERS_VER_PANTHEIOS_EXTRAS_XHELPERS_INTERNAL_H_COMMON_EDIT     8
 #endif /* !PANTHEIOS_DOCUMENTATION_SKIP_SECTION */
 
 /* /////////////////////////////////////////////////////////////////////////
@@ -83,8 +84,13 @@
  * The minor version number of Pantheios.Extras.xHelpers
  */
 
-/** \def PANTHEIOS_EXTRAS_XHELPERS_VER_REVISION
- * The revision version number of Pantheios.Extras.xHelpers
+/** \def PANTHEIOS_EXTRAS_XHELPERS_VER_PATCH
+ * The patch version number of Pantheios.Extras.xHelpers
+ */
+
+/** \def PANTHEIOS_EXTRAS_XHELPERS_VER_ALPHABETA
+ * The alpha/beta number of Pantheios.Extras.xHelpers, in the range 1-0xFE
+ * for prerelease versions, and 0xFF for a released version
  */
 
 /** \def PANTHEIOS_EXTRAS_XHELPERS_VER
@@ -100,9 +106,20 @@
 
 #define PANTHEIOS_EXTRAS_XHELPERS_VER_MAJOR                 0
 #define PANTHEIOS_EXTRAS_XHELPERS_VER_MINOR                 1
-#define PANTHEIOS_EXTRAS_XHELPERS_VER_REVISION              2
+#define PANTHEIOS_EXTRAS_XHELPERS_VER_PATCH                 2
+#define PANTHEIOS_EXTRAS_XHELPERS_VER_ALPHABETA             0xFF
 
-#define PANTHEIOS_EXTRAS_XHELPERS_VER                       PANTHEIOS_EXTRAS_XHELPERS_VER_0_1_2
+#define PANTHEIOS_EXTRAS_XHELPERS_VER \
+    (0\
+        |   (   PANTHEIOS_EXTRAS_XHELPERS_VER_MAJOR       << 24   ) \
+        |   (   PANTHEIOS_EXTRAS_XHELPERS_VER_MINOR       << 16   ) \
+        |   (   PANTHEIOS_EXTRAS_XHELPERS_VER_PATCH       <<  8   ) \
+        |   (   PANTHEIOS_EXTRAS_XHELPERS_VER_ALPHABETA   <<  0   ) \
+    )
+
+#ifndef PANTHEIOS_DOCUMENTATION_SKIP_SECTION
+# define PANTHEIOS_EXTRAS_XHELPERS_VER_REVISION             PANTHEIOS_EXTRAS_XHELPERS_VER_PATCH
+#endif /* !PANTHEIOS_DOCUMENTATION_SKIP_SECTION */
 
 /* /////////////////////////////////////////////////////////////////////////
  * Inclusion

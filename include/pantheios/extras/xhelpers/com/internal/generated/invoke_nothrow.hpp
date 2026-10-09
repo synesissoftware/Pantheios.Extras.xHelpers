@@ -106,7 +106,7 @@ inline R invoke_nothrow_1(R (PANTHEIOS_EXTRAS_HELPERS_CALLCONV_SYMBOL_ *pfn)(A0)
 template <typename R, typename A0>
 inline R invoke_nothrow(R (PANTHEIOS_EXTRAS_HELPERS_CALLCONV_SYMBOL_ *pfn)(A0), A0 a0, pan_char_t const* functionName)
 {
-    return invoke_nothrow_1<R, A0, A1>(pfn, a0, functionName);
+    return invoke_nothrow_1<R, A0>(pfn, a0, functionName);
 }
 template <typename R, typename A0>
 inline R invoke_nothrow_1(R (PANTHEIOS_EXTRAS_HELPERS_CALLCONV_SYMBOL_ *pfn)(A0), A0 a0, pan_char_t const* functionName)
