@@ -8,6 +8,10 @@
  *
  * Status:      This file is auto-generated: DO NOT EDIT!
  *
+ * Patched:     9th October 2026 by hand (1-parameter invoke_nothrow()
+ *              forwarded with a spurious A1); the generator is not part of
+ *              this repository.
+ *
  * Copyright:   The copyright restrictions of the Pantheios library,
  *              enumerated in the header file <pantheios/pantheios.h>,
  *              apply to this file

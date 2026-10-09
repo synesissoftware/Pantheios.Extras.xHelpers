@@ -172,10 +172,18 @@ jobs:
           test -f "${INSTALL_PREFIX}/include/pantheios/extras/xhelpers.hpp"
           test -f "${INSTALL_PREFIX}/include/pantheios/extras/xhelpers/invoke.hpp"
           test -f "${INSTALL_PREFIX}/include/pantheios/extras/xhelpers/internal/common.h"
-          test -f "${INSTALL_PREFIX}/lib/cmake/pantheios.extras.xhelpers/pantheios.extras.xhelpers-config.cmake"
+          CONFIG="${INSTALL_PREFIX}/lib/cmake/pantheios.extras.xhelpers/pantheios.extras.xhelpers-config.cmake"
+          test -f "$CONFIG"
+          # STLSoft and Pantheios were located as packages, so the installed
+          # configuration must re-find them for consumers
+          grep -q '^if(TRUE)' "$CONFIG"
+          grep -q 'find_dependency(STLSoft)' "$CONFIG"
+          grep -q 'find_dependency(Pantheios)' "$CONFIG"
 
       # a header-only library: the consumer is compiled but not linked, so
-      # the smoke needs no Pantheios front-/back-end libraries
+      # the smoke needs no Pantheios front-/back-end libraries. The
+      # consumer must NOT find STLSoft or Pantheios itself: the installed
+      # package configuration is responsible for that.
       - name: Configure and build install smoke consumer
         shell: bash
         run: |
@@ -185,13 +193,10 @@ jobs:
           cat > "$CONSUMER/CMakeLists.txt" <<'EOF'
           cmake_minimum_required(VERSION 3.13)
           project(xhelpers_install_smoke CXX)
-          find_package(STLSoft REQUIRED)
-          find_package(Pantheios REQUIRED)
           find_package(pantheios.extras.xhelpers REQUIRED)
           add_library(consumer OBJECT consumer.cpp)
           target_link_libraries(consumer PRIVATE
-              Pantheios.Extras.xHelpers::Pantheios.Extras.xHelpers
-              Pantheios::Pantheios.core)
+              Pantheios.Extras.xHelpers::Pantheios.Extras.xHelpers)
           EOF
           cat > "$CONSUMER/consumer.cpp" <<'EOF'
           #include <pantheios/extras/xhelpers.hpp>

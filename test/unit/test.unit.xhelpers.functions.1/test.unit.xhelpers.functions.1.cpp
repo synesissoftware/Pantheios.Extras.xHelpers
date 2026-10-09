@@ -10,7 +10,8 @@
  *
  * License:     (Licensed under the Synesis Software Open License)
  *
- *              Copyright (c) 2011-2015, Synesis Software Pty Ltd.
+ *              Copyright (c) 2019-2026, Synesis Information Systems Pty Ltd.
+ *              Copyright (c) 2011-2019, Synesis Software Pty Ltd.
  *              All rights reserved.
  *
  *              www:        http://www.synesis.com.au/software
@@ -209,7 +210,7 @@ static void test_1_1()
 			return pantheios::extras::xhelpers::invoke_nothrow(c_api_function_nothrow_, r, PANTHEIOS_LITERAL_STRING("c_api_function_nothrow"), RC_OUTOFMEMORY, RC_EXCEPTION, RC_UNEXPECTED);
 		}
 
-		static int c_api_function_oom_(int r)
+		static int c_api_function_oom_(int /* r */)
 		{
 			// throw directly: see above
 			throw std::bad_alloc();
@@ -219,7 +220,7 @@ static void test_1_1()
 			return pantheios::extras::xhelpers::invoke_nothrow(c_api_function_oom_, r, PANTHEIOS_LITERAL_STRING("c_api_function_oom"), RC_OUTOFMEMORY, RC_EXCEPTION, RC_UNEXPECTED);
 		}
 
-		static int c_api_function_throw_stdx_(int r)
+		static int c_api_function_throw_stdx_(int /* r */)
 		{
 			throw std::runtime_error("abc");
 		}
