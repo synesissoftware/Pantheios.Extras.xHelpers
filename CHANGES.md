@@ -1,6 +1,14 @@
 # Pantheios.Extras.xHelpers - Changes <!-- omit in toc -->
 
 
+## 0.1.3-beta2 - 11th October 2026
+
+* Registered automated tests with **CTest** and added a `ctest --no-tests=error` step to **ci-cell.yml**;
+* Added Windows-only **test.unit.xhelpers.com.functions.1** covering COM `invoke_nothrow()` HRESULT mapping (`S_OK`, `E_OUTOFMEMORY`, `E_FAIL`, `E_UNEXPECTED`);
+* Renamed the release-status macro to `PANTHEIOS_EXTRAS_XHELPERS_VER_RELSTATUS`, retaining `PANTHEIOS_EXTRAS_XHELPERS_VER_ALPHABETA` as a documentation-hidden alias;
+* Aligned **ci-cell.yml** with the BDUT/xTests layout so Windows cells dogfood the native `.cmd` runners;
+
+
 ## 0.1.3-beta1 - 9th October 2026
 
 * Added **CMake** build (`BUILD_TESTING`, `BUILD_EXAMPLES`), exported INTERFACE target `Pantheios.Extras.xHelpers::Pantheios.Extras.xHelpers`, and installed package `pantheios.extras.xhelpers` whose configuration re-finds **STLSoft** and **Pantheios** when they were located as packages;
