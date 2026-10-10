@@ -28,7 +28,6 @@
 
 ## Testing improvements
 
-* Add Windows-only unit tests for the COM overloads (`HRESULT` mapping), and run them in CI;
 * Add unit tests for the `invoke_nothrow_method()` overloads;
 
 
