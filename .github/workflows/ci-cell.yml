@@ -102,6 +102,17 @@ jobs:
             cmake --build build --parallel
           fi
 
+      - name: Test (CTest)
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ "${{ inputs.toolchain }}" = "mingw" ]; then
+            export PATH="/mingw64/bin:$PATH"
+          fi
+          ctest --test-dir build --output-on-failure \
+            --build-config "${{ inputs.build-type }}" --timeout 60 \
+            --no-tests=error
+
       - name: Run examples (Bash)
         if: runner.os != 'Windows'
         shell: bash
