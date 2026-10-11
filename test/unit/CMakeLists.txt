@@ -6,3 +6,4 @@ endif(WIN32)
 
 add_subdirectory(test.unit.version)
 add_subdirectory(test.unit.xhelpers.functions.1)
+add_subdirectory(test.unit.xhelpers.methods.1)

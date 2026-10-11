@@ -1,10 +1,12 @@
 # Pantheios.Extras.xHelpers - Changes <!-- omit in toc -->
 
 
-## 0.1.3-beta2 - 11th October 2026
+## 0.1.3-beta2 - 12th October 2026
 
 * Registered automated tests with **CTest** and added a `ctest --no-tests=error` step to **ci-cell.yml**;
 * Added Windows-only **test.unit.xhelpers.com.functions.1** covering COM `invoke_nothrow()` HRESULT mapping (`S_OK`, `E_OUTOFMEMORY`, `E_FAIL`, `E_UNEXPECTED`);
+* Added **test.unit.xhelpers.methods.1** covering `invoke_nothrow_method()` for 0- and 1-parameter members;
+* Removed unused **implicit_link.cpp** from **test.unit.xhelpers.functions.1**;
 * Renamed the release-status macro to `PANTHEIOS_EXTRAS_XHELPERS_VER_RELSTATUS`, retaining `PANTHEIOS_EXTRAS_XHELPERS_VER_ALPHABETA` as a documentation-hidden alias;
 * Aligned **ci-cell.yml** with the BDUT/xTests layout so Windows cells dogfood the native `.cmd` runners;
 
