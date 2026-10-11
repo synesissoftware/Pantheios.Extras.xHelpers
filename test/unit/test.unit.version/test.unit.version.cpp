@@ -4,7 +4,7 @@
  * Purpose: Unit tests for Pantheios.Extras.xHelpers version macros.
  *
  * Created: 9th October 2026
- * Updated: 9th October 2026
+ * Updated: 11th October 2026
  *
  * ////////////////////////////////////////////////////////////////////// */
 
@@ -31,19 +31,21 @@ static void test_version_components()
 
 static void test_version_composite()
 {
-    unsigned const alphabeta = static_cast<unsigned>(PANTHEIOS_EXTRAS_XHELPERS_VER) & 0xff;
+    unsigned const relstatus = static_cast<unsigned>(PANTHEIOS_EXTRAS_XHELPERS_VER) & 0xff;
     unsigned const computed =
         (0
             |   (   static_cast<unsigned>(PANTHEIOS_EXTRAS_XHELPERS_VER_MAJOR) << 24   )
             |   (   static_cast<unsigned>(PANTHEIOS_EXTRAS_XHELPERS_VER_MINOR) << 16   )
             |   (   static_cast<unsigned>(PANTHEIOS_EXTRAS_XHELPERS_VER_PATCH) <<  8   )
-            |   (   alphabeta                                                  <<  0   )
+            |   (   relstatus                                                  <<  0   )
         );
 
-    XTESTS_TEST_INTEGER_EQUAL(0x81u, alphabeta);
+    XTESTS_TEST_INTEGER_EQUAL(0x82u, relstatus);
+    XTESTS_TEST_INTEGER_EQUAL(relstatus, static_cast<unsigned>(PANTHEIOS_EXTRAS_XHELPERS_VER_RELSTATUS));
+    XTESTS_TEST_INTEGER_EQUAL(relstatus, static_cast<unsigned>(PANTHEIOS_EXTRAS_XHELPERS_VER_ALPHABETA));
     XTESTS_TEST_INTEGER_EQUAL(computed, static_cast<unsigned>(PANTHEIOS_EXTRAS_XHELPERS_VER));
-    XTESTS_TEST_INTEGER_EQUAL(static_cast<unsigned>(PANTHEIOS_EXTRAS_XHELPERS_VER_0_1_3_BETA_1), static_cast<unsigned>(PANTHEIOS_EXTRAS_XHELPERS_VER));
-    XTESTS_TEST_INTEGER_EQUAL(0x00010381u, static_cast<unsigned>(PANTHEIOS_EXTRAS_XHELPERS_VER));
+    XTESTS_TEST_INTEGER_EQUAL(static_cast<unsigned>(PANTHEIOS_EXTRAS_XHELPERS_VER_0_1_3_BETA_2), static_cast<unsigned>(PANTHEIOS_EXTRAS_XHELPERS_VER));
+    XTESTS_TEST_INTEGER_EQUAL(0x00010382u, static_cast<unsigned>(PANTHEIOS_EXTRAS_XHELPERS_VER));
 }
 
 
