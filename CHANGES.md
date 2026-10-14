@@ -9,6 +9,7 @@
 * Removed unused **implicit_link.cpp** from **test.unit.xhelpers.functions.1**;
 * Renamed the release-status macro to `PANTHEIOS_EXTRAS_XHELPERS_VER_RELSTATUS`, retaining `PANTHEIOS_EXTRAS_XHELPERS_VER_ALPHABETA` as a documentation-hidden alias;
 * Aligned **ci-cell.yml** with the BDUT/xTests layout so Windows cells dogfood the native `.cmd` runners;
+* Gold-copied tip **`run_all_examples.*`** / **`run_all_scratch_tests.*`** / **`run_all_unit_tests.sh`** from **misc-dev-scripts** `cmake-helpers` `@0754c23` (discovery exclusions; scratch **`--skip-interactive`**);
 
 
 ## 0.1.3-beta1 - 9th October 2026

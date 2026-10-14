@@ -10,7 +10,7 @@
 
 | Date                  | News Item                                   | Details                                               |
 | --------------------- | ------------------------------------------- | ----------------------------------------------------- |
-| 12th October 2026     | Release of [Pantheios.Extras.xHelpers 0.1.3-beta2](https://github.com/synesissoftware/Pantheios.Extras.xHelpers/releases/tag/0.1.3-beta2) | `_RELSTATUS`; Windows `.cmd` CI; COM and method tests |
+| 12th October 2026     | Release of [Pantheios.Extras.xHelpers 0.1.3-beta2](https://github.com/synesissoftware/Pantheios.Extras.xHelpers/releases/tag/0.1.3-beta2) | Helpers `@0754c23`; `_RELSTATUS`; Windows `.cmd` CI   |
 | 9th October 2026      | Release of [Pantheios.Extras.xHelpers 0.1.3-beta1](https://github.com/synesissoftware/Pantheios.Extras.xHelpers/releases/tag/0.1.3-beta1) | CMake packaging, CI, docs, version test, example      |
 | 14th March 2017       | Pantheios.Extras.xHelpers 0.1.2             | fixed version information                             |
 | 15th September 2015   | Pantheios.Extras.xHelpers 0.1.1             | initial public release                                |
