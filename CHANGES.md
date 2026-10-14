@@ -5,6 +5,7 @@
 
 * Advanced the library version to **0.1.3-beta3** (`PANTHEIOS_EXTRAS_XHELPERS_VER_0_1_3_BETA_3`, `PANTHEIOS_EXTRAS_XHELPERS_VER_RELSTATUS` **0x83**);
 * Gold-copied tip **`run_all_examples.*`** / **`run_all_scratch_tests.*`** / **`run_all_unit_tests.sh`** from **misc-dev-scripts** `cmake-helpers` `@0754c23` (discovery exclusions; scratch **`--skip-interactive`**);
+* Install **woad** before **Pantheios** in CI (**`install-sis-deps`**) so tip Pantheios configure succeeds;
 
 
 ## 0.1.3-beta2 - 12th October 2026
