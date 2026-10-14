@@ -51,13 +51,15 @@ jobs:
             mingw-w64-x86_64-cmake
             mingw-w64-x86_64-make
 
-      - name: Install dependencies (STLSoft + shwild + xTests + b64 + Pantheios)
+      # Dependency order is deliberate (not lexicographic): woad precedes
+      # Pantheios (bec.AnsiConsole); b64 is optional for Pantheios.
+      - name: Install dependencies (STLSoft + shwild + xTests + b64 + woad + Pantheios)
         uses: ./.github/actions/install-sis-deps
         with:
           build-type: ${{ inputs.build-type }}
           c-compiler: ${{ inputs.c-compiler }}
           cpp-compiler: ${{ inputs.cpp-compiler }}
-          dependencies: STLSoft shwild xTests b64 Pantheios
+          dependencies: STLSoft shwild xTests b64 woad Pantheios
           toolchain: ${{ inputs.toolchain }}
 
       - name: Configure
