@@ -11,3 +11,19 @@ target_link_libraries(test.scratch.versions
 		Pantheios::Pantheios.fe.simple
 		Pantheios::Pantheios.util
 )
+
+if(b64_FOUND)
+
+	target_link_libraries(test.scratch.versions
+		PRIVATE
+			b64::core
+	)
+endif()
+
+if(TARGET xTests::core)
+
+	target_link_libraries(test.scratch.versions
+		PRIVATE
+			xTests::core
+	)
+endif()
