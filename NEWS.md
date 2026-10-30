@@ -10,6 +10,7 @@
 
 | Date                  | News Item                                   | Details                                               |
 | --------------------- | ------------------------------------------- | ----------------------------------------------------- |
+| 31st October 2026     | Release of [Pantheios.Extras.xHelpers 0.1.3-beta5](https://github.com/synesissoftware/Pantheios.Extras.xHelpers/releases/tag/0.1.3-beta5) | `File:` labels use the project-relative path |
 | 27th October 2026     | Release of [Pantheios.Extras.xHelpers 0.1.3-beta4](https://github.com/synesissoftware/Pantheios.Extras.xHelpers/releases/tag/0.1.3-beta4) | `HAS_<Pkg>` / `HAS_<PKG>` for detected Synesis packages |
 | 14th October 2026     | Release of [Pantheios.Extras.xHelpers 0.1.3-beta3](https://github.com/synesissoftware/Pantheios.Extras.xHelpers/releases/tag/0.1.3-beta3) | Helpers tip resync; CI installs **woad** for Pantheios |
 | 12th October 2026     | Release of [Pantheios.Extras.xHelpers 0.1.3-beta2](https://github.com/synesissoftware/Pantheios.Extras.xHelpers/releases/tag/0.1.3-beta2) | `_RELSTATUS`; Windows `.cmd` CI; COM and method tests |
