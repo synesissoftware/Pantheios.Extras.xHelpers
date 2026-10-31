@@ -1,10 +1,10 @@
 /* /////////////////////////////////////////////////////////////////////////
- * File:    test.unit.version.cpp
+ * File:    test/unit/test.unit.version/test.unit.version.cpp
  *
  * Purpose: Unit tests for Pantheios.Extras.xHelpers version macros.
  *
  * Created: 9th October 2026
- * Updated: 27th October 2026
+ * Updated: 30th October 2026
  *
  * ////////////////////////////////////////////////////////////////////// */
 
@@ -40,12 +40,12 @@ static void test_version_composite()
             |   (   relstatus                                                  <<  0   )
         );
 
-    XTESTS_TEST_INTEGER_EQUAL(0x84u, relstatus);
+    XTESTS_TEST_INTEGER_EQUAL(0x85u, relstatus);
     XTESTS_TEST_INTEGER_EQUAL(relstatus, static_cast<unsigned>(PANTHEIOS_EXTRAS_XHELPERS_VER_RELSTATUS));
     XTESTS_TEST_INTEGER_EQUAL(relstatus, static_cast<unsigned>(PANTHEIOS_EXTRAS_XHELPERS_VER_ALPHABETA));
     XTESTS_TEST_INTEGER_EQUAL(computed, static_cast<unsigned>(PANTHEIOS_EXTRAS_XHELPERS_VER));
-    XTESTS_TEST_INTEGER_EQUAL(static_cast<unsigned>(PANTHEIOS_EXTRAS_XHELPERS_VER_0_1_3_BETA_4), static_cast<unsigned>(PANTHEIOS_EXTRAS_XHELPERS_VER));
-    XTESTS_TEST_INTEGER_EQUAL(0x00010384u, static_cast<unsigned>(PANTHEIOS_EXTRAS_XHELPERS_VER));
+    XTESTS_TEST_INTEGER_EQUAL(static_cast<unsigned>(PANTHEIOS_EXTRAS_XHELPERS_VER_0_1_3_BETA_5), static_cast<unsigned>(PANTHEIOS_EXTRAS_XHELPERS_VER));
+    XTESTS_TEST_INTEGER_EQUAL(0x00010385u, static_cast<unsigned>(PANTHEIOS_EXTRAS_XHELPERS_VER));
 }
 
 

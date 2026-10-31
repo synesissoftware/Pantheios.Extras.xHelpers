@@ -1,11 +1,11 @@
 /* /////////////////////////////////////////////////////////////////////////
- * File:    main.cpp
+ * File:    examples/cpp/example.cpp.invoke_nothrow.1/main.cpp
  *
  * Purpose: Demonstrates wrapping a C-API-style function, whose
  *          implementation may throw, so that it never throws to its caller.
  *
  * Created: 9th October 2026
- * Updated: 9th October 2026
+ * Updated: 30th October 2026
  *
  * ////////////////////////////////////////////////////////////////////// */
 
