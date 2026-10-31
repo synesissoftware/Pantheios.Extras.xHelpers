@@ -1,11 +1,11 @@
 /* /////////////////////////////////////////////////////////////////////////
- * File:    test.unit.xhelpers.com.functions.1.cpp
+ * File:    test/unit/test.unit.xhelpers.com.functions.1/test.unit.xhelpers.com.functions.1.cpp
  *
  * Purpose: Unit tests for the Windows COM `invoke_nothrow()` overloads
  *          (HRESULT mapping).
  *
  * Created: 10th October 2026
- * Updated: 10th October 2026
+ * Updated: 30th October 2026
  *
  * ////////////////////////////////////////////////////////////////////// */
 
