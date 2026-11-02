@@ -48,9 +48,8 @@ With **CMake**, link the INTERFACE target
 
 ## Q4: "Which STLSoft version is required?"
 
-**STLSoft** 1.11.1-rc7 or later. This is enforced by a compile-time check
-in **internal/stlsoft.h**; the **CMake** package-version check can only
-express 1.11.1, because package versions cannot name a pre-release.
+**STLSoft** 1.11.5 or later. The **CMake** package check and the
+compile-time check in **internal/stlsoft.h** both require that version.
 
 
 <!-- ########################### end of file ########################### -->
