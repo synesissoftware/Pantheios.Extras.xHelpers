@@ -4,7 +4,7 @@
  * Purpose: "Entry point" include into the STLSoft libraries.
  *
  * Created: 30th January 2011
- * Updated: 9th October 2026
+ * Updated: 2nd November 2026
  *
  * Home:    http://www.pantheios.org/
  *
@@ -74,8 +74,8 @@
  */
 
 #if !defined(_STLSOFT_VER) || \
-    _STLSOFT_VER < 0x010b01c7
-# error Requires STLSoft 1.11.1-rc7, or later. (www.stlsoft.org)
+    _STLSOFT_VER < 0x010B05FF
+# error Requires STLSoft 1.11.5, or later. (www.stlsoft.org)
 #endif /* STLSoft version */
 
 #if defined(__cplusplus) && \

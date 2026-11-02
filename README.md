@@ -54,7 +54,7 @@ Hand-written `try`/`catch` blocks at every API boundary are repetitive and easy 
 
 | Component     | Implemented in | Use in                                              | Dependencies |
 | ------------- | -------------- | --------------------------------------------------- | ------------ |
-| Core library  | C++ headers    | **pantheios/extras/xhelpers.hpp**                   | [Pantheios](https://github.com/synesissoftware/Pantheios), [STLSoft](https://github.com/synesissoftware/STLSoft/) 1.11.1-rc7+ |
+| Core library  | C++ headers    | **pantheios/extras/xhelpers.hpp**                   | [Pantheios](https://github.com/synesissoftware/Pantheios), [STLSoft](https://github.com/synesissoftware/STLSoft/) 1.11.5+ |
 | Examples      | C++            | —                                                   | Pantheios, STLSoft |
 | Tests         | C++            | —                                                   | Pantheios, STLSoft, [xTests](https://github.com/synesissoftware/xTests/) |
 
@@ -116,7 +116,7 @@ Defect reports, feature requests, and pull requests are welcome on https://githu
 ### Dependencies
 
 * [Pantheios](https://github.com/synesissoftware/Pantheios);
-* [STLSoft](https://github.com/synesissoftware/STLSoft/) 1.11.1-rc7 or later;
+* [STLSoft](https://github.com/synesissoftware/STLSoft/) 1.11.5 or later;
 
 
 #### Development dependencies

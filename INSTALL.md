@@ -3,7 +3,7 @@
 **Pantheios.Extras.xHelpers** is a header-only C++ library: public
 headers live under **include/pantheios/extras**. There is no compiled
 `src` library target. Once the headers are on the include path (and
-**Pantheios** and **STLSoft** 1.11.1-rc7 or later are available), include
+**Pantheios** and **STLSoft** 1.11.5 or later are available), include
 **pantheios/extras/xhelpers.hpp** and call the `invoke_nothrow()` family.
 
 Building the project's tests additionally requires **xTests**.
@@ -28,7 +28,7 @@ The primary choice for installation is by use of **CMake**.
    $ git clone https://github.com/synesissoftware/Pantheios.Extras.xHelpers/
    ```
 
-2. Install **Pantheios** and **STLSoft** 1.11.1-rc7 or later (and
+2. Install **Pantheios** and **STLSoft** 1.11.5 or later (and
    **xTests** if you will build tests) via their own **CMake** scripts
    first.
 

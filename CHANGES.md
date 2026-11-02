@@ -1,6 +1,14 @@
 # Pantheios.Extras.xHelpers - Changes <!-- omit in toc -->
 
 
+## 0.1.3-beta6 - 2nd November 2026
+
+* build:
+  * **STLSoft** minimum is **1.11.5** (`0x010B05FF`), in **CMake** and in **internal/stlsoft.h**;
+  * **xTests** minimum is **0.28.2**;
+* version:
+  * added `PANTHEIOS_EXTRAS_XHELPERS_VER_0_1_3_BETA_6`;
+
 ## 0.1.3-beta5 - 1st November 2026
 
 * testing:
