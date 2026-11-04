@@ -14,6 +14,7 @@ Header-only **C++** library in the **Pantheios.Extras** namespace that provides 
 - [Introduction](#introduction)
   - [Why non-throwing wrappers](#why-non-throwing-wrappers)
   - [Dependencies](#dependencies)
+- [Developer Experience](#developer-experience)
 - [Installation](#installation)
 - [Components](#components)
   - [C-compatible API](#c-compatible-api)
@@ -48,6 +49,38 @@ Hand-written `try`/`catch` blocks at every API boundary are repetitive and easy 
 * Out-of-memory handling must itself avoid allocating;
 
 **Pantheios.Extras.xHelpers** centralises that protocol in one set of overloads.
+
+
+## Developer Experience
+
+**STLSoft** 1.11.5 or later and **Pantheios** 1.0.1 must already be installed (or available as source trees). The shortest CMake build of this header-only library, examples included and tests omitted:
+
+```bash
+./prepare_cmake.sh --disable-testing -v
+./build_cmake.sh
+```
+
+A one-parameter boundary that logs exceptions and returns the nominated codes:
+
+```cpp
+#include <pantheios/extras/xhelpers.hpp>
+
+static int api_(int x)
+{
+    return x;
+}
+
+int api(int x)
+{
+    return pantheios::extras::xhelpers::invoke_nothrow(
+        api_, x
+    ,   PANTHEIOS_LITERAL_STRING("api")
+    ,   -1, -2, -3
+    );
+}
+```
+
+`-1`, `-2`, and `-3` are the codes for out-of-memory, a handled exception, and an unexpected exception. The program must still link a Pantheios front-end and back-end. Install steps, bundling, and the CMake consumer target are in [INSTALL.md](./INSTALL.md).
 
 
 ### Dependencies

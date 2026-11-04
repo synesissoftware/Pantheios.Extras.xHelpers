@@ -10,6 +10,7 @@
 
 | Date                  | News Item                                   | Details                                               |
 | --------------------- | ------------------------------------------- | ----------------------------------------------------- |
+| 4th November 2026     | Release of [Pantheios.Extras.xHelpers 0.1.3](https://github.com/synesissoftware/Pantheios.Extras.xHelpers/releases/tag/0.1.3) | Pantheios **1.0.1** floor (`0x010001FF`); **README.md** Developer Experience |
 | 2nd November 2026     | Release of [Pantheios.Extras.xHelpers 0.1.3-beta6](https://github.com/synesissoftware/Pantheios.Extras.xHelpers/releases/tag/0.1.3-beta6) | **STLSoft** **1.11.5**; **xTests** **0.28.2** |
 | 1st November 2026     | Release of [Pantheios.Extras.xHelpers 0.1.3-beta5](https://github.com/synesissoftware/Pantheios.Extras.xHelpers/releases/tag/0.1.3-beta5) | `File:` labels use the project-relative path; **Check test names** |
 | 27th October 2026     | Release of [Pantheios.Extras.xHelpers 0.1.3-beta4](https://github.com/synesissoftware/Pantheios.Extras.xHelpers/releases/tag/0.1.3-beta4) | `HAS_<Pkg>` / `HAS_<PKG>` for detected Synesis packages |
