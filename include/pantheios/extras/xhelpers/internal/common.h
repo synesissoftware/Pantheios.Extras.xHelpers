@@ -1,13 +1,13 @@
 /* /////////////////////////////////////////////////////////////////////////
- * File:        pantheios/extras/xhelpers/internal/common.h
+ * File:    pantheios/extras/xhelpers/internal/common.h
  *
- * Purpose:     Definition of common features header for the
- *              Pantheios.Extras.xHelpers library.
+ * Purpose: Definition of common features header for the
+ *          Pantheios.Extras.xHelpers library.
  *
- * Created:     30th January 2011
- * Updated:     2nd November 2026
+ * Created: 30th January 2011
+ * Updated: 4th November 2026
  *
- * Home:        http://www.pantheios.org/
+ * Home:    http://www.pantheios.org/
  *
  * Copyright (c) 2019-2026, Matthew Wilson and Synesis Information Systems
  * Copyright (c) 2011-2017, Matthew Wilson and Synesis Software
@@ -56,8 +56,8 @@
 #ifndef PANTHEIOS_DOCUMENTATION_SKIP_SECTION
 # define PANTHEIOS_EXTRAS_XHELPERS_VER_PANTHEIOS_EXTRAS_XHELPERS_INTERNAL_H_COMMON_MAJOR    1
 # define PANTHEIOS_EXTRAS_XHELPERS_VER_PANTHEIOS_EXTRAS_XHELPERS_INTERNAL_H_COMMON_MINOR    0
-# define PANTHEIOS_EXTRAS_XHELPERS_VER_PANTHEIOS_EXTRAS_XHELPERS_INTERNAL_H_COMMON_REVISION 12
-# define PANTHEIOS_EXTRAS_XHELPERS_VER_PANTHEIOS_EXTRAS_XHELPERS_INTERNAL_H_COMMON_EDIT     15
+# define PANTHEIOS_EXTRAS_XHELPERS_VER_PANTHEIOS_EXTRAS_XHELPERS_INTERNAL_H_COMMON_REVISION 13
+# define PANTHEIOS_EXTRAS_XHELPERS_VER_PANTHEIOS_EXTRAS_XHELPERS_INTERNAL_H_COMMON_EDIT     17
 #endif /* !PANTHEIOS_DOCUMENTATION_SKIP_SECTION */
 
 /* /////////////////////////////////////////////////////////////////////////
@@ -108,12 +108,13 @@
 # define PANTHEIOS_EXTRAS_XHELPERS_VER_0_1_3_BETA_4         0x00010384
 # define PANTHEIOS_EXTRAS_XHELPERS_VER_0_1_3_BETA_5         0x00010385
 # define PANTHEIOS_EXTRAS_XHELPERS_VER_0_1_3_BETA_6         0x00010386
+# define PANTHEIOS_EXTRAS_XHELPERS_VER_0_1_3                0x000103FF
 #endif /* !PANTHEIOS_DOCUMENTATION_SKIP_SECTION */
 
 #define PANTHEIOS_EXTRAS_XHELPERS_VER_MAJOR                 0
 #define PANTHEIOS_EXTRAS_XHELPERS_VER_MINOR                 1
 #define PANTHEIOS_EXTRAS_XHELPERS_VER_PATCH                 3
-#define PANTHEIOS_EXTRAS_XHELPERS_VER_RELSTATUS             0x86
+#define PANTHEIOS_EXTRAS_XHELPERS_VER_RELSTATUS             0xFF
 
 #define PANTHEIOS_EXTRAS_XHELPERS_VER \
     (0\

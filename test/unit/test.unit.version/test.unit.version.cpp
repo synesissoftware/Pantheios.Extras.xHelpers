@@ -4,7 +4,7 @@
  * Purpose: Unit tests for Pantheios.Extras.xHelpers version macros.
  *
  * Created: 9th October 2026
- * Updated: 2nd November 2026
+ * Updated: 4th November 2026
  *
  * ////////////////////////////////////////////////////////////////////// */
 
@@ -40,12 +40,12 @@ static void test_version_composite()
             |   (   relstatus                                                  <<  0   )
         );
 
-    XTESTS_TEST_INTEGER_EQUAL(0x86u, relstatus);
+    XTESTS_TEST_INTEGER_EQUAL(0xFFu, relstatus);
     XTESTS_TEST_INTEGER_EQUAL(relstatus, static_cast<unsigned>(PANTHEIOS_EXTRAS_XHELPERS_VER_RELSTATUS));
     XTESTS_TEST_INTEGER_EQUAL(relstatus, static_cast<unsigned>(PANTHEIOS_EXTRAS_XHELPERS_VER_ALPHABETA));
     XTESTS_TEST_INTEGER_EQUAL(computed, static_cast<unsigned>(PANTHEIOS_EXTRAS_XHELPERS_VER));
-    XTESTS_TEST_INTEGER_EQUAL(static_cast<unsigned>(PANTHEIOS_EXTRAS_XHELPERS_VER_0_1_3_BETA_6), static_cast<unsigned>(PANTHEIOS_EXTRAS_XHELPERS_VER));
-    XTESTS_TEST_INTEGER_EQUAL(0x00010386u, static_cast<unsigned>(PANTHEIOS_EXTRAS_XHELPERS_VER));
+    XTESTS_TEST_INTEGER_EQUAL(static_cast<unsigned>(PANTHEIOS_EXTRAS_XHELPERS_VER_0_1_3), static_cast<unsigned>(PANTHEIOS_EXTRAS_XHELPERS_VER));
+    XTESTS_TEST_INTEGER_EQUAL(0x000103FFu, static_cast<unsigned>(PANTHEIOS_EXTRAS_XHELPERS_VER));
 }
 
 

@@ -6,7 +6,9 @@ headers live under **include/pantheios/extras**. There is no compiled
 **Pantheios** and **STLSoft** 1.11.5 or later are available), include
 **pantheios/extras/xhelpers.hpp** and call the `invoke_nothrow()` family.
 
-Building the project's tests additionally requires **xTests**.
+Building the project's tests additionally requires **xTests**. The
+versions scratch program also links **woad** 0.2.1 or later, which
+**Pantheios** already requires.
 
 
 ## Table of Contents <!-- omit in toc -->

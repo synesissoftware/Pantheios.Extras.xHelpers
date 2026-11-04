@@ -10,6 +10,7 @@ target_link_libraries(test.scratch.versions
 		Pantheios::Pantheios.bec.null
 		Pantheios::Pantheios.fe.simple
 		Pantheios::Pantheios.util
+		woad::woad
 )
 
 if(b64_FOUND)

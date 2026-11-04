@@ -1,13 +1,14 @@
 /* /////////////////////////////////////////////////////////////////////////
- * File:        pantheios/extras/xhelpers/internal/pantheios.h
+ * File:    pantheios/extras/xhelpers/internal/pantheios.h
  *
- * Purpose:     "Entry point" include into the Pantheios Main library.
+ * Purpose: "Entry point" include into the Pantheios Main library.
  *
- * Created:     22nd November 2011
- * Updated:     10th September 2015
+ * Created: 22nd November 2011
+ * Updated: 4th November 2026
  *
- * Home:        http://www.pantheios.org/
+ * Home:    http://www.pantheios.org/
  *
+ * Copyright (c) 2019-2026, Matthew Wilson and Synesis Information Systems
  * Copyright (c) 2011-2015, Matthew Wilson and Synesis Software
  * All rights reserved.
  *
@@ -53,8 +54,8 @@
 #ifndef PANTHEIOS_DOCUMENTATION_SKIP_SECTION
 # define PANTHEIOS_EXTRAS_XHELPERS_VER_PANTHEIOS_EXTRAS_XHELPERS_INTERNAL_H_PANTHEIOS_MAJOR       1
 # define PANTHEIOS_EXTRAS_XHELPERS_VER_PANTHEIOS_EXTRAS_XHELPERS_INTERNAL_H_PANTHEIOS_MINOR       0
-# define PANTHEIOS_EXTRAS_XHELPERS_VER_PANTHEIOS_EXTRAS_XHELPERS_INTERNAL_H_PANTHEIOS_REVISION    2
-# define PANTHEIOS_EXTRAS_XHELPERS_VER_PANTHEIOS_EXTRAS_XHELPERS_INTERNAL_H_PANTHEIOS_EDIT        2
+# define PANTHEIOS_EXTRAS_XHELPERS_VER_PANTHEIOS_EXTRAS_XHELPERS_INTERNAL_H_PANTHEIOS_REVISION    3
+# define PANTHEIOS_EXTRAS_XHELPERS_VER_PANTHEIOS_EXTRAS_XHELPERS_INTERNAL_H_PANTHEIOS_EDIT        4
 #endif /* !PANTHEIOS_DOCUMENTATION_SKIP_SECTION */
 
 /* /////////////////////////////////////////////////////////////////////////
@@ -72,8 +73,8 @@
 /* Pantheios version check */
 
 #if !defined(PANTHEIOS_VER) || \
-	PANTHEIOS_VER < 0x010001d7
-# error Pantheios.Extras.xHelpers required Pantheios 1.0.1 beta 215, or later
+	PANTHEIOS_VER < 0x010001FF
+# error Pantheios.Extras.xHelpers requires Pantheios 1.0.1, or later
 #endif /* !PANTHEIOS_NO_NAMESPACE */
 
 #if defined(__cplusplus) && \

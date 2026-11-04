@@ -1,6 +1,16 @@
 # Pantheios.Extras.xHelpers - Changes <!-- omit in toc -->
 
 
+## 0.1.3 - 4th November 2026
+
+* compatibility:
+  * require **Pantheios** 1.0.1 or later (`PANTHEIOS_VER` `0x010001FF`) in **internal/pantheios.h**;
+* docs:
+  * **README.md** **Developer Experience** immediately after Introduction;
+* testing:
+  * **test.scratch.versions** links **woad** (test-only) and prints coloured version lines, including **woad**, in the same form as **Pantheios**;
+
+
 ## 0.1.3-beta6 - 2nd November 2026
 
 * build:

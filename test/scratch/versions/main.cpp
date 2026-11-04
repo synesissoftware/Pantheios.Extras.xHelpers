@@ -1,14 +1,31 @@
+/* /////////////////////////////////////////////////////////////////////////
+ * File:    test/scratch/versions/main.cpp
+ *
+ * Purpose: Lists composite version macros for
+ *          Pantheios.Extras.xHelpers and its dependencies.
+ *
+ * Created: 9th October 2026
+ * Updated: 4th November 2026
+ *
+ * ////////////////////////////////////////////////////////////////////// */
+
+
+/* /////////////////////////////////////////////////////////////////////////
+ * includes
+ */
 
 #include <pantheios/extras/xhelpers.hpp>
-
-#ifdef HAS_b64
-# include <b64/b64.h>
-#endif
 
 #include <pantheios/pantheios.h>
 #include <pantheios/frontends/stock.h>
 
 #include <stlsoft/stlsoft.h>
+
+#ifdef HAS_b64
+# include <b64/b64.h>
+#endif
+
+#include <woad/woad.h>
 
 #ifdef HAS_xTests
 # include <xtests/xtests.h>
@@ -17,14 +34,23 @@
 #include <iomanip>
 #include <iostream>
 
+#include <stdio.h>
 #include <stdlib.h>
 
+
+/* /////////////////////////////////////////////////////////////////////////
+ * constants
+ */
 
 #define PROGRAM_NAME                                        "test.scratch.versions"
 
 
 PANTHEIOS_EXTERN_C PAN_CHAR_T const PANTHEIOS_FE_PROCESS_IDENTITY[] = PANTHEIOS_LITERAL_STRING(PROGRAM_NAME);
 
+
+/* /////////////////////////////////////////////////////////////////////////
+ * helpers
+ */
 
 template<
     typename T_stream
@@ -33,34 +59,63 @@ template<
 void
 version(
     T_stream&   stm
+,   FILE*       file
 ,   char const* prefix
 ,   char const* libname
 ,   char const* macroname
 ,   T_integer   libver
+,   char const* version_string = nullptr
 )
 {
     stm
         << prefix
+        << WOAD_FG_BLUE_FOR(file)
         << libname
-        << ": v"
-        << ((libver >> 24) & 0xff)
-        << '.'
-        << ((libver >> 16) & 0xff)
-        << '.'
-        << ((libver >> 8) & 0xff)
-        << '.'
-        << ((libver >> 0) & 0xff)
+        << WOAD_RESET_FOR(file)
+        << ": "
+        << WOAD_FG_GREEN_FOR(file)
+        << 'v'
+        ;
+
+    if (nullptr != version_string)
+    {
+        stm << version_string;
+    }
+    else
+    {
+        stm
+            << ((libver >> 24) & 0xff)
+            << '.'
+            << ((libver >> 16) & 0xff)
+            << '.'
+            << ((libver >> 8) & 0xff)
+            << '.'
+            << ((libver >> 0) & 0xff)
+            ;
+    }
+
+    stm
+        << WOAD_RESET_FOR(file)
         << " ("
+        << WOAD_FG_CYAN_FOR(file)
         << macroname
-        << " = 0x"
+        << WOAD_RESET_FOR(file)
+        << " = "
+        << WOAD_FG_GREEN_FOR(file)
+        << "0x"
         << std::hex << std::setfill('0') << std::setw(8)
         << static_cast<unsigned>(libver)
         << std::dec
+        << WOAD_RESET_FOR(file)
         << ")"
         << std::endl
         ;
 }
 
+
+/* /////////////////////////////////////////////////////////////////////////
+ * main()
+ */
 
 int main(int /* argc */, char* /* argv */[])
 {
@@ -69,7 +124,7 @@ int main(int /* argc */, char* /* argv */[])
     {
         unsigned const libver = PANTHEIOS_EXTRAS_XHELPERS_VER;
 
-        version(std::cout, "", "Pantheios.Extras.xHelpers", "PANTHEIOS_EXTRAS_XHELPERS_VER", libver);
+        version(std::cout, stdout, "", "Pantheios.Extras.xHelpers", "PANTHEIOS_EXTRAS_XHELPERS_VER", libver);
     }
 
 #ifdef HAS_b64
@@ -82,7 +137,7 @@ int main(int /* argc */, char* /* argv */[])
     {
         unsigned const libver = B64_VER;
 
-        version(std::cout, "\t", "b64", "B64_VER", libver);
+        version(std::cout, stdout, "\t", "b64", "B64_VER", libver);
     }
 #endif
 
@@ -94,7 +149,7 @@ int main(int /* argc */, char* /* argv */[])
     {
         unsigned const libver = PANTHEIOS_VER;
 
-        version(std::cout, "\t", "Pantheios", "PANTHEIOS_VER", libver);
+        version(std::cout, stdout, "\t", "Pantheios", "PANTHEIOS_VER", libver);
     }
 
     if (0 == efferents_count++)
@@ -105,7 +160,18 @@ int main(int /* argc */, char* /* argv */[])
     {
         unsigned const libver = _STLSOFT_VER;
 
-        version(std::cout, "\t", "STLSoft", "_STLSOFT_VER", libver);
+        version(std::cout, stdout, "\t", "STLSoft", "_STLSOFT_VER", libver);
+    }
+
+    if (0 == efferents_count++)
+    {
+        std::cout << "\n" << "efferent dependencies:" << std::endl;
+    }
+
+    {
+        unsigned const libver = WOAD_VER;
+
+        version(std::cout, stdout, "\t", "woad", "WOAD_VER", libver, woad::version_string());
     }
 
 #ifdef HAS_xTests
@@ -118,9 +184,12 @@ int main(int /* argc */, char* /* argv */[])
     {
         unsigned const libver = _XTESTS_VER;
 
-        version(std::cout, "\t", "xTests", "_XTESTS_VER", libver);
+        version(std::cout, stdout, "\t", "xTests", "_XTESTS_VER", libver);
     }
 #endif
 
     return EXIT_SUCCESS;
 }
+
+/* ///////////////////////////// end of file //////////////////////////// */
+

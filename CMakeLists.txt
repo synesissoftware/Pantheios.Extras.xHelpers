@@ -5,7 +5,7 @@
 # Purpose:  Top-level CMake lists file for Pantheios.Extras.xHelpers
 #
 # Created:  9th October 2026
-# Updated:  2nd November 2026
+# Updated:  4th November 2026
 #
 # ######################################################################## #
 
@@ -215,6 +215,23 @@ if(DEFINED PANTHEIOS_INCLUDE_DIR)
 
 	include_directories(${PANTHEIOS_INCLUDE_DIR})
 endif()
+
+
+# ############################
+# woad
+#
+# Test-only. Pantheios already requires woad, so anyone who can configure
+# against Pantheios already has it. test.scratch.versions links it to
+# colour its report. The exported library target does not.
+
+if(BUILD_TESTING)
+
+	set(woad_REQUIRED_VERSION_ 0.2.1)
+
+	find_package(woad ${woad_REQUIRED_VERSION_} REQUIRED)
+
+	message("-- CMake package woad found (version ${woad_VERSION}; ${woad_REQUIRED_VERSION_} requested)")
+endif(BUILD_TESTING)
 
 
 # ############################
