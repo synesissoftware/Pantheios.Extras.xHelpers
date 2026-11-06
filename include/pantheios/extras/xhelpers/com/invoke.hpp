@@ -1,14 +1,15 @@
 /* /////////////////////////////////////////////////////////////////////////
- * File:        pantheios/extras/xhelpers/com/invoke.hpp
+ * File:    pantheios/extras/xhelpers/com/invoke.hpp
  *
- * Purpose:     Definition of the pantheios::extras::xhelpers::com::invoke overloads.
+ * Purpose: Definition of the pantheios::extras::xhelpers::com::invoke overloads.
  *
- * Created:     1st May 2006
- * Updated:     10th September 2015
+ * Created: 1st May 2006
+ * Updated: 6th November 2026
  *
- * Home:        http://www.pantheios.org/
+ * Home:    http://www.pantheios.org/
  *
- * Copyright (c) 2006-2015, Matthew Wilson and Synesis Software
+ * Copyright (c) 2019-2026, Matthew Wilson and Synesis Information Systems
+ * Copyright (c) 2006-2019, Matthew Wilson and Synesis Software
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -56,7 +57,7 @@
 # define PANTHEIOS_EXTRAS_XHELPERS_VER_PANTHEIOS_EXTRAS_XHELPERS_COM_HPP_INVOKE_MAJOR       4
 # define PANTHEIOS_EXTRAS_XHELPERS_VER_PANTHEIOS_EXTRAS_XHELPERS_COM_HPP_INVOKE_MINOR       1
 # define PANTHEIOS_EXTRAS_XHELPERS_VER_PANTHEIOS_EXTRAS_XHELPERS_COM_HPP_INVOKE_REVISION    3
-# define PANTHEIOS_EXTRAS_XHELPERS_VER_PANTHEIOS_EXTRAS_XHELPERS_COM_HPP_INVOKE_EDIT        38
+# define PANTHEIOS_EXTRAS_XHELPERS_VER_PANTHEIOS_EXTRAS_XHELPERS_COM_HPP_INVOKE_EDIT        40
 #endif /* !PANTHEIOS_DOCUMENTATION_SKIP_SECTION */
 
 /* /////////////////////////////////////////////////////////////////////////
@@ -205,7 +206,7 @@ namespace impl
  *  Win32:
  *   - cdecl (symbol is STLSOFT_CDECL), if STLSOFT_CF_CDECL_SUPPORTED
  *   - stdcall (symbol is STLSOFT_STDCALL), if STLSOFT_CF_STDCALL_SUPPORTED
- * 
+ *
  *  x64:
  *   - fastcall (symbol is STLSOFT_CDECL, which is nothing in x64)
  */
@@ -266,10 +267,10 @@ namespace impl
  * Namespace
  */
 
-} /* namespace com */
-} /* namespace xhelpers */
-} /* namespace extras */
-} /* namespace pantheios */
+} // namespace com
+} // namespace xhelpers
+} // namespace extras
+} // namespace pantheios
 
 /* /////////////////////////////////////////////////////////////////////////
  * Inclusion

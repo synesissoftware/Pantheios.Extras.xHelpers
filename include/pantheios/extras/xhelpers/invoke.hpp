@@ -1,12 +1,12 @@
 /* /////////////////////////////////////////////////////////////////////////
- * File:        pantheios/extras/xhelpers/invoke.hpp
+ * File:    pantheios/extras/xhelpers/invoke.hpp
  *
- * Purpose:     Definition of the pantheios::extras::xhelpers::invoke overloads.
+ * Purpose: Definition of the pantheios::extras::xhelpers::invoke overloads.
  *
- * Created:     1st May 2006
- * Updated:     9th October 2026
+ * Created: 1st May 2006
+ * Updated: 6th November 2026
  *
- * Home:        http://www.pantheios.org/
+ * Home:    http://www.pantheios.org/
  *
  * Copyright (c) 2019-2026, Matthew Wilson and Synesis Information Systems
  * Copyright (c) 2006-2019, Matthew Wilson and Synesis Software
@@ -57,7 +57,7 @@
 # define PANTHEIOS_EXTRAS_XHELPERS_VER_PANTHEIOS_EXTRAS_XHELPERS_HPP_INVOKE_MAJOR       4
 # define PANTHEIOS_EXTRAS_XHELPERS_VER_PANTHEIOS_EXTRAS_XHELPERS_HPP_INVOKE_MINOR       2
 # define PANTHEIOS_EXTRAS_XHELPERS_VER_PANTHEIOS_EXTRAS_XHELPERS_HPP_INVOKE_REVISION    3
-# define PANTHEIOS_EXTRAS_XHELPERS_VER_PANTHEIOS_EXTRAS_XHELPERS_HPP_INVOKE_EDIT        38
+# define PANTHEIOS_EXTRAS_XHELPERS_VER_PANTHEIOS_EXTRAS_XHELPERS_HPP_INVOKE_EDIT        40
 #endif /* !PANTHEIOS_DOCUMENTATION_SKIP_SECTION */
 
 /* /////////////////////////////////////////////////////////////////////////
@@ -4071,9 +4071,9 @@ out_of_memory:
  * Namespace
  */
 
-} /* namespace xhelpers */
-} /* namespace extras */
-} /* namespace pantheios */
+} // namespace xhelpers
+} // namespace extras
+} // namespace pantheios
 
 /* /////////////////////////////////////////////////////////////////////////
  * Inclusion
